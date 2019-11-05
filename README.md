@@ -24,7 +24,7 @@ This project demonstrates a multi-tenant IoT solution using Azure Service Fabric
 
 One of the greate feature of Service Fabric is the ability to create change and delete applications and services at runtime. To get started, we can first create a new Service Fabric - Stateless MVC application calling Admin Application and Admin Web Servce. In this project we will have to application types which will create instances of stateless services. In order to create a new instance of the fabric client we can simple call the following code below.
 
-First of all we need to create an instance to Connect to the cluster by creating a FabricClient instance. To connect to the local development cluster, run the following example:
+First of all we need to create an instance to Connect to the cluster by creating a FabricClient instance. To connect to the local development cluster, run the following example inside the webService Constructor:
 
 ```csharp
 using System.Fabric;
@@ -32,3 +32,5 @@ using System.Fabric;
 // Further down in our constructor.
 var fabricClient = new FabricClient();
 ```
+
+After creating the serviceFabric instance we should add dependency injection.
