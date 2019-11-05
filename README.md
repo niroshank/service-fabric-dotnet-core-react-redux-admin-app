@@ -34,3 +34,8 @@ var fabricClient = new FabricClient();
 ```
 
 After creating the serviceFabric instance we should add dependency injection.
+
+```csharp
+//add dependency injection for fabricClient
+.AddSingleton<FabricClient>(this.fabricClient))
+```
