@@ -11,10 +11,12 @@ namespace Iot.Admin.WebService.Models
         {
             this.IotHubConnectionString = iotHubConnectionString;
             this.Version = version;
+            this.PartitionCount = partitionCount;
         }
 
         public string IotHubConnectionString { get; set; }
 
         public string Version { get; set; }
+        public int PartitionCount { get; set; }
     }
 }

@@ -70,7 +70,8 @@ namespace IoT.Admin.WebService.Controllers
                     MinReplicaSetSize = 1,
                     TargetReplicaSetSize = 1,
                     //PartitionSchemeDescription = new UniformInt64RangePartitionSchemeDescription(eventHubInfo.PartitionCount, 0, eventHubInfo.PartitionCount - 1),
-                    PartitionSchemeDescription = new SingletonPartitionSchemeDescription(),
+                    PartitionSchemeDescription = new UniformInt64RangePartitionSchemeDescription(parameters.PartitionCount, Int64.MinValue, Int64.MaxValue),
+                    //PartitionSchemeDescription = new SingletonPartitionSchemeDescription(),
                     ServiceName = serviceNameUriBuilder.Build(),
                     ServiceTypeName = Names.IngestionTelemetryServiceTypeName
                     //ServiceName = new Uri("fabric:/IoT.Ingestion.Application/sineth-app/IoT.Ingestion.TelemetryService"),
