@@ -10,7 +10,7 @@ page_type: iot product
 description: "This sample project demonstrates a multi-tenant IoT solution using Azure Service Fabric."
 ---
 
-# Sevice Fabric Dotnet Core Angular Sample
+# Azure Sevice Fabric Dotnet Core Angular Sample
 
 This project demonstrates a multi-tenant IoT solution using Azure Service Fabric.
 
