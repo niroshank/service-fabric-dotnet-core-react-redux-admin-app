@@ -12,6 +12,7 @@ using Iot.Admin.WebService.ViewModels;
 using Iot.Admin.WebService.Models;
 using System.Fabric.Description;
 using Iot.Common;
+using System.Collections.Specialized;
 
 namespace IoT.Admin.WebService.Controllers
 {
@@ -51,11 +52,15 @@ namespace IoT.Admin.WebService.Controllers
         {
             try
             {
+                // Application parameters are passed to the Ingestion application instance.
+                NameValueCollection appInstanceParameterCollection = new NameValueCollection();
+                appInstanceParameterCollection["IotHubConnectionString"] = parameters.IotHubConnectionString;
+
                 ApplicationDescription application = new ApplicationDescription(
                 new Uri($"{Names.IngestionApplicationPrefix}/{name}"),
                 Names.IngestionApplicationTypeName,
-                parameters.Version
-                /*appInstanceParameters*/);
+                parameters.Version,
+                appInstanceParameterCollection);
 
                 // Create a named application instance
                 await this.fabricClient.ApplicationManager.CreateApplicationAsync(application, this.operationTimeout, this.appLifetime.ApplicationStopping);
@@ -73,9 +78,9 @@ namespace IoT.Admin.WebService.Controllers
                     PartitionSchemeDescription = new UniformInt64RangePartitionSchemeDescription(parameters.PartitionCount, Int64.MinValue, Int64.MaxValue),
                     //PartitionSchemeDescription = new SingletonPartitionSchemeDescription(),
                     ServiceName = serviceNameUriBuilder.Build(),
-                    ServiceTypeName = Names.IngestionTelemetryServiceTypeName
-                    //ServiceName = new Uri("fabric:/IoT.Ingestion.Application/sineth-app/IoT.Ingestion.TelemetryService"),
-                    //ServiceTypeName = "IoT.Ingestion.TelemetryServiceType"
+                    ServiceTypeName = Names.IngestionTelemetryServiceTypeName,
+                    
+
                 };
 
                 await this.fabricClient.ServiceManager.CreateServiceAsync(service, this.operationTimeout, this.appLifetime.ApplicationStopping);
