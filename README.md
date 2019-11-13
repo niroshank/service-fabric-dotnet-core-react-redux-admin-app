@@ -33,7 +33,7 @@ using System.Fabric;
 var fabricClient = new FabricClient();
 ```
 
-After creating the serviceFabric instance we should add dependency injection.
+After creating the serviceFabric instance we should add dependency injection inside the service class.
 
 ```csharp
 //add dependency injection for fabricClient
