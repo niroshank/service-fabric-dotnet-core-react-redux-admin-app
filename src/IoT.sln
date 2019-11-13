@@ -7,13 +7,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Ingestion Application", "In
 EndProject
 Project("{A07B5EB6-E848-4116-A8D0-A826331D98C6}") = "IoT.Ingestion.Application", "IoT.Ingestion.Application\IoT.Ingestion.Application.sfproj", "{100B3DA5-4206-4CD0-BDE4-EEF41BD998ED}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IoT.Ingestion.TelemetryService", "IoT.Ingestion.TelemetryService\IoT.Ingestion.TelemetryService.csproj", "{BC58CBB5-1CD9-4429-B6A3-67E10FB4D425}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IoT.Ingestion.TelemetryService", "IoT.Ingestion.TelemetryService\IoT.Ingestion.TelemetryService.csproj", "{BC58CBB5-1CD9-4429-B6A3-67E10FB4D425}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Admin Application", "Admin Application", "{EE487106-4C9E-49D0-A22A-C435A93DCBA0}"
 EndProject
 Project("{A07B5EB6-E848-4116-A8D0-A826331D98C6}") = "IoT.Admin.Application", "IoT.Admin.Application\IoT.Admin.Application.sfproj", "{1AAF9B05-44FA-4ECD-9733-A4910456A635}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IoT.Admin.WebService", "IoT.Admin.WebService\IoT.Admin.WebService.csproj", "{E208CEBB-75D2-4BEE-942E-27F35A8FB07D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IoT.Common", "IoT.Common\IoT.Common.csproj", "{F6A48E0E-45BB-46C1-8FD0-B9329CAFAB32}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IoT.Admin.WebService", "IoT.Admin.WebService\IoT.Admin.WebService.csproj", "{010A360E-6353-4169-9C00-59F411D8A542}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -47,14 +49,22 @@ Global
 		{1AAF9B05-44FA-4ECD-9733-A4910456A635}.Release|x64.ActiveCfg = Release|x64
 		{1AAF9B05-44FA-4ECD-9733-A4910456A635}.Release|x64.Build.0 = Release|x64
 		{1AAF9B05-44FA-4ECD-9733-A4910456A635}.Release|x64.Deploy.0 = Release|x64
-		{E208CEBB-75D2-4BEE-942E-27F35A8FB07D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E208CEBB-75D2-4BEE-942E-27F35A8FB07D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E208CEBB-75D2-4BEE-942E-27F35A8FB07D}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{E208CEBB-75D2-4BEE-942E-27F35A8FB07D}.Debug|x64.Build.0 = Debug|Any CPU
-		{E208CEBB-75D2-4BEE-942E-27F35A8FB07D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E208CEBB-75D2-4BEE-942E-27F35A8FB07D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E208CEBB-75D2-4BEE-942E-27F35A8FB07D}.Release|x64.ActiveCfg = Release|Any CPU
-		{E208CEBB-75D2-4BEE-942E-27F35A8FB07D}.Release|x64.Build.0 = Release|Any CPU
+		{F6A48E0E-45BB-46C1-8FD0-B9329CAFAB32}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6A48E0E-45BB-46C1-8FD0-B9329CAFAB32}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6A48E0E-45BB-46C1-8FD0-B9329CAFAB32}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{F6A48E0E-45BB-46C1-8FD0-B9329CAFAB32}.Debug|x64.Build.0 = Debug|Any CPU
+		{F6A48E0E-45BB-46C1-8FD0-B9329CAFAB32}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6A48E0E-45BB-46C1-8FD0-B9329CAFAB32}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F6A48E0E-45BB-46C1-8FD0-B9329CAFAB32}.Release|x64.ActiveCfg = Release|Any CPU
+		{F6A48E0E-45BB-46C1-8FD0-B9329CAFAB32}.Release|x64.Build.0 = Release|Any CPU
+		{010A360E-6353-4169-9C00-59F411D8A542}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{010A360E-6353-4169-9C00-59F411D8A542}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{010A360E-6353-4169-9C00-59F411D8A542}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{010A360E-6353-4169-9C00-59F411D8A542}.Debug|x64.Build.0 = Debug|Any CPU
+		{010A360E-6353-4169-9C00-59F411D8A542}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{010A360E-6353-4169-9C00-59F411D8A542}.Release|Any CPU.Build.0 = Release|Any CPU
+		{010A360E-6353-4169-9C00-59F411D8A542}.Release|x64.ActiveCfg = Release|Any CPU
+		{010A360E-6353-4169-9C00-59F411D8A542}.Release|x64.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -63,7 +73,7 @@ Global
 		{100B3DA5-4206-4CD0-BDE4-EEF41BD998ED} = {2DC222F5-EE11-4DDA-8358-64443735BAFE}
 		{BC58CBB5-1CD9-4429-B6A3-67E10FB4D425} = {2DC222F5-EE11-4DDA-8358-64443735BAFE}
 		{1AAF9B05-44FA-4ECD-9733-A4910456A635} = {EE487106-4C9E-49D0-A22A-C435A93DCBA0}
-		{E208CEBB-75D2-4BEE-942E-27F35A8FB07D} = {EE487106-4C9E-49D0-A22A-C435A93DCBA0}
+		{010A360E-6353-4169-9C00-59F411D8A542} = {EE487106-4C9E-49D0-A22A-C435A93DCBA0}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F177E5D7-07DA-4FFB-879E-1390D6BC874C}

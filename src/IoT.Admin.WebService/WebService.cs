@@ -19,9 +19,13 @@ namespace IoT.Admin.WebService
     /// </summary>
     internal sealed class WebService : StatelessService
     {
+        private readonly FabricClient fabricClient;
         public WebService(StatelessServiceContext context)
             : base(context)
-        { }
+        {
+            // Connect to the local cluster.
+            this.fabricClient = new FabricClient();
+        }
 
         /// <summary>
         /// Optional override to create listeners (like tcp, http) for this service instance.
@@ -40,7 +44,8 @@ namespace IoT.Admin.WebService
                                     .UseKestrel()
                                     .ConfigureServices(
                                         services => services
-                                            .AddSingleton<StatelessServiceContext>(serviceContext))
+                                        //add dependency injection for fabricClient
+                                        .AddSingleton<FabricClient>(this.fabricClient))
                                     .UseContentRoot(Directory.GetCurrentDirectory())
                                     .UseStartup<Startup>()
                                     .UseServiceFabricIntegration(listener, ServiceFabricIntegrationOptions.None)
