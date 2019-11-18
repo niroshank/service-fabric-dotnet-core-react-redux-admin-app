@@ -16,6 +16,8 @@
         <Settings>
           <Section Name="ServiceConfigurationSection">
             <Parameter Name="IotHubConnectionString" Value="[IoTHubConnectionString]" />
+            
+            <!--<Parameter Name="IotHubConnectionString" Value="[IoTHubConnectionString]" />-->
           </Section>
         </Settings>
       </ConfigOverride>
